@@ -1,12 +1,13 @@
 
-.products {
-
+.portfolio-title {
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .product {
   width: 350px;
   float: left;
-  margin-top: 20px;
+  margin: 20px auto 20px;
   .product-image{
     width: 300px;
     margin-left: 20px;
@@ -14,6 +15,9 @@
   .product-title {
     font-size: 20px;
     font-weight: bold;
+    text-align: center;
+  }
+  .product-language {
     text-align: center;
   }
   .product-comment {
