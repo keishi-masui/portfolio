@@ -1,0 +1,66 @@
+.header {
+  width: 100%;
+  height: 100px;
+  background-color: #fff;
+  &__contents {
+    width: 980px;
+    height: 85px;
+    margin: 10px auto ;
+    &__left {
+      float: left;
+      width: 280px;
+      height: 100%;
+      .title {
+        box-sizing: border-box;
+        padding: 5px;
+      }
+    }
+    &__right {
+      float: right;
+      width: 280px;
+      height: 100%;
+      padding: 30px 20px 0;
+      box-sizing: border-box;
+      .link {
+        float: right;
+        i {
+          margin-right: 10px;
+        }
+        .fa-github {
+          color: #333;
+        }
+      }
+    }
+  }
+}
+
+.navi {
+  width: 100%;
+  height: 50px;
+  background-color: #fff5fe;
+  &__contents {
+    width: 980px;
+    height: 100%;
+    margin: 0 auto ;
+    ul {
+      width: 980px;
+      height: 100%;
+      margin: 0 auto ;
+      li {
+        height: 20px;
+        line-height: 20px;
+        width: 160px;
+        float: left;
+        margin: 10px auto;
+        padding: 3px 10px;
+        border-right: 1px solid #ff3366 ;
+        text-align: center;
+        a {
+          height: 20px;
+          line-height: 20px;
+          color: #333;
+        }
+      }
+    }
+  }
+}

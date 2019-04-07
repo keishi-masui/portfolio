@@ -1,0 +1,34 @@
+.header
+  .header__contents
+    .header__contents__left
+      = link_to root_path do
+        = image_tag "potohu.png", class: "title"
+    .header__contents__right
+      .link
+        = link_to(content_tag(:i,"",class: "fab fa-twitter fa-3x"), "https://twitter.com/MasuiKc")
+        = link_to(content_tag(:i, "", class: "fab fa-github fa-3x"), "https://github.com/keishi-masui")
+
+
+.navi
+  .navi__contents
+    %ul.navi__contents__list
+      %li
+        %a.navi{href:""}
+          %i.fas.fa-home
+          ホーム
+      %li
+        %a.navi{href:""}
+          %i.fas.fa-folder-open
+          ポートフォリオ
+      %li
+        %a.navi{href:""}
+          %i.fas.fa-user
+          マイページ
+      %li
+        %a.navi{href:""}
+          %i.fas.fa-blog
+          ブログ
+      %li
+        %a.navi{href:""}
+          %i.fas.fa-phone
+          お問い合わせ
