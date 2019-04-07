@@ -11,14 +11,25 @@
       width: 280px;
       height: 100%;
       .title {
-        font-size: 35px;
-        font-weight: bold;
+        box-sizing: border-box;
+        padding: 5px;
       }
     }
     &__right {
       float: right;
       width: 280px;
       height: 100%;
+      padding: 30px 20px 0;
+      box-sizing: border-box;
+      .link {
+        float: right;
+        i {
+          margin-right: 10px;
+        }
+        .fa-github {
+          color: #333;
+        }
+      }
     }
   }
 }
@@ -47,6 +58,7 @@
         a {
           height: 20px;
           line-height: 20px;
+          color: #333;
         }
       }
     }
