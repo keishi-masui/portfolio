@@ -1,0 +1,32 @@
+.container
+  = render "share/header"
+  .main
+    .left
+      .left__contents
+        %h2.portfolio-title
+          Portfolio
+        / .products
+        /   - @products.each do |product|
+        /     .product
+        /       = link_to root_path do
+        /         = image_tag product.image, class: "product-image"
+        /       %h3.product-title
+        /         = product.name
+        /       %p.product-language
+        /         = product.language
+        /       %p.product-comment
+        /         = product.comment
+
+
+    .right
+      .right__contents
+        .new_post
+          = link_to new_product_path do
+            new post
+
+
+    .clearfix
+
+  = render "share/footer"
+/ <%= link_to image_tag("logo.png"), :action => "index" %>
+/ # <a href="/blogs"><img alt="Logo" src="/images/logo.png" /></a>
