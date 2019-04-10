@@ -6,10 +6,12 @@
 
 .product {
   width: 350px;
+  height: 400px;
   float: left;
   margin: 20px auto 20px;
   .product-image{
     width: 300px;
+    height: 250px;
     margin-left: 20px;
   }
   .product-title {
@@ -21,6 +23,8 @@
     text-align: center;
   }
   .product-comment {
+    box-sizing: border-box;
     padding: 5px;
+    word-wrap: break-word;
   }
 }
