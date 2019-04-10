@@ -21,14 +21,40 @@
       border: dashed 1px #ccc;
       border-radius: 5px;
       width: 500px;
-      height:200px;
+      height:100px;
       margin: 0 auto;
       background-color: #eeeeee;
       cursor: pointer;
       text-align: center;
-      padding-top: 70px;
+      padding-top: 20px;
       box-sizing: border-box;
       color: gray;
+    }
+    .img_field {
+      display: block;
+      border: dashed 1px #ccc;
+      border-radius: 5px;
+      width: 500px;
+      height:300px;
+      margin: 0 auto;
+      background-color: #fff;
+      cursor: pointer;
+      text-align: center;
+      vertical-align: middle;
+      box-sizing: border-box;
+      color: gray;
+      position: relative;
+      .img_field_inner {
+        width: 200px;
+        height: 2rem;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+
+      }
     }
     .text_box {
       display: block;

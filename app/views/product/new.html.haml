@@ -9,12 +9,22 @@
           .form
             .form__content
               = f.label :画像, class: "form__label"
+
+              .img_field#img_field{onClick: "$('#file').click()"}
+                - if @product.image.url.present?
+                  = image_tag @product.image.url
+                - else
+                  .img_field_inner
+                    プレビュー
+                    %i.fas.fa-image.fa-2x
+              %br
+
               %label{for: 'file', class: 'image_box'}
-                %i.fas.fa-image.fa-2x
+                %i.fas.fa-file-upload.fa-2x
                 %br
-                サムネイルを
-                クリックでアップロード
+                クリックでサムネイルをアップロード
               = f.file_field :image, id: "file", style: "visibility:hidden"
+
             .form__content
               = f.label :名前, class: "form__label"
               = f.text_field :name, class: "text_box",placeholder:"タイトル"
