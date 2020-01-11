@@ -4,18 +4,26 @@
     .left
       .left__contents
         %h2.portfolio-title
-          Portfolio
-        / .products
-        /   - @products.each do |product|
-        /     .product
-        /       = link_to root_path do
-        /         = image_tag product.image, class: "product-image"
-        /       %h3.product-title
-        /         = product.name
-        /       %p.product-language
-        /         = product.language
-        /       %p.product-comment
-        /         = product.comment
+          = @product.name
+
+        .image
+          .image-label
+            イメージ
+          .image-area
+            = image_tag @product.image, class: "product-image", style: "width:300px;"
+
+        .language
+          .language-label
+            使用言語
+          .language-area
+            = @product.language
+
+        .comment
+          .comment-label
+            説明
+          .comment-area
+            = @product.comment
+
 
 
     .right
