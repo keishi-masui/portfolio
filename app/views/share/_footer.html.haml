@@ -2,23 +2,23 @@
   .footer__navi
     %ul.footer__navi__list
       %li
-        %a{href:""}
+        = link_to(root_path) do
           HOME
           %i.fas.fa-home
       %li
-        %a{href:""}
+        = link_to(profile_home_index_path) do
+          Profile
+          %i.fas.fa-user
+      %li
+        = link_to(product_index_path) do
           Portfolio
           %i.fas.fa-folder-open
       %li
-        %a{href:""}
-          MyPage
-          %i.fas.fa-user
-      %li
-        %a{href:""}
+        = link_to(blog_home_index_path) do
           Blog
           %i.fas.fa-blog
       %li
-        %a{href:""}
+        = link_to(contact_home_index_path) do
           Contact
           %i.fas.fa-phone
 
