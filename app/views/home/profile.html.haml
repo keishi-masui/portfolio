@@ -1,0 +1,45 @@
+.container
+  = render "share/header"
+  .main
+    .contents
+      .profile
+        %h2
+          Profile
+        .profile__data
+          %dl.clearfix
+            %dt
+              名前:
+            %dd
+              増井 啓之（ますい けいし）
+            %dt
+              出身:
+            %dd
+              東京都 練馬区
+            %dt
+              趣味・特技:
+            %dd
+              野菜づくり、自転車、野球、学習指導
+            %dt
+              スキル:
+            %dd
+              Ruby, Ruby on Rails, HTML, CSS, Javascript, jQuery, Github, AWS
+        .skill__icon
+
+      .history
+        %h2.history__title
+          History
+        %p
+          1989年　東京都練馬区生まれ　東京で最も田舎っぽい家庭で育つ
+          %br
+          2012年　大学卒業後は学校講師と学習塾講師として働く
+          %br
+          2018年　プログラミングを独学ではじめる
+          %br
+          　　　　さらなるレベルアップのためTECH::EXPERTの夜間休日コースに通学
+          %br
+          2019年　半年のスクール学習を終え、フリーランスで活動開始
+
+
+    .clearfix
+
+  = render "share/footer"

@@ -1,6 +1,6 @@
 .container
   = render "share/header"
-  .main
+  .portfolio-main
     .left
       .left__contents
         %h2.portfolio-title
@@ -8,7 +8,7 @@
         .products
           - @products.each do |product|
             .product
-              = link_to root_path do
+              = link_to product_path(product.id) do
                 = image_tag product.image, class: "product-image"
               %h3.product-title
                 = product.name
@@ -23,10 +23,15 @@
         .new_post
           = link_to new_product_path do
             new post
+        .others
+          if_user_signed_in(mypage)
+          %br
+          news
+          %br
+          genre
 
 
     .clearfix
 
   = render "share/footer"
-/ <%= link_to image_tag("logo.png"), :action => "index" %>
-/ # <a href="/blogs"><img alt="Logo" src="/images/logo.png" /></a>
+

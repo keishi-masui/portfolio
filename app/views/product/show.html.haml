@@ -1,0 +1,40 @@
+.container
+  = render "share/header"
+  .main
+    .left
+      .left__contents
+        %h2.portfolio-title
+          = @product.name
+
+        .image
+          .image-label
+            イメージ
+          .image-area
+            = image_tag @product.image, class: "product-image", style: "width:300px;"
+
+        .language
+          .language-label
+            使用言語
+          .language-area
+            = @product.language
+
+        .comment
+          .comment-label
+            説明
+          .comment-area
+            = @product.comment
+
+
+
+    .right
+      .right__contents
+        .new_post
+          = link_to new_product_path do
+            new post
+
+
+    .clearfix
+
+  = render "share/footer"
+/ <%= link_to image_tag("logo.png"), :action => "index" %>
+/ # <a href="/blogs"><img alt="Logo" src="/images/logo.png" /></a>

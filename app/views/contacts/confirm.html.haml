@@ -1,0 +1,36 @@
+.container
+  = render "share/header"
+  .confirm_main
+    .contents
+      .contact-section
+        %h2
+          Contact
+
+        = form_for @contact, url: contacts_path do |f|
+
+          .contact-form
+            %i.fas.fa-user
+            = f.hidden_field :name
+            = f.label :name
+            = @contact.name
+
+          .contact-form
+            = f.hidden_field :email
+            %i.fas.fa-envelope
+            = f.label :email
+            = @contact.email
+
+          .contact-form
+            = f.hidden_field :message
+            %i.fas.fa-pen
+            = f.label :message
+            .contact-form__text
+              = simple_format(@contact.message)
+
+          .contact-form
+            = f.submit "SEND", class: "contact-form__button"
+
+
+    .clearfix
+
+  = render "share/footer"

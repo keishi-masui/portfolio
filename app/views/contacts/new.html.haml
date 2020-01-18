@@ -1,0 +1,33 @@
+.container
+  = render "share/header"
+  .main
+    .contents
+      .contact-section
+        %h2
+          Contact
+        = form_for @contact, url: confirm_contacts_path do |f|
+
+          = render 'layouts/error_message', model: f.object
+
+          .contact-form
+            %i.fas.fa-user
+            = f.label :name
+            = f.text_field :name, class: "contact-form__box", placeholder: " ※必須"
+
+          .contact-form
+            %i.fas.fa-envelope
+            = f.label :email
+            = f.text_field :email, class: "contact-form__box", placeholder: " ※必須"
+
+          .contact-form
+            %i.fas.fa-pen
+            = f.label :message
+            = f.text_area :message, class: "contact-form__box", placeholder: " ※必須"
+
+          .contact-form
+            = f.submit "SEND", class: "contact-form__button"
+
+
+    .clearfix
+
+  = render "share/footer"
