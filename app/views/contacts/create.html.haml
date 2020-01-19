@@ -1,9 +1,18 @@
 .container
   = render "share/header"
   .main
-    .left
-      .left__contents
+    :javascript
+      $(document).ready( function() {alert('お問い合わせメールが送信されました。');} );
+    .contents
+      .contact-section
         %h2.form-title
           お問い合わせありがとうございました
-        = link_to root_path do
+
+        = link_to(root_path, class:'back_home') do
+          %i.fas.fa-home
           ホームへ戻る
+
+
+    .clearfix
+
+  = render "share/footer"

@@ -1,10 +1,14 @@
 .container
   = render "share/header"
-  .main
+  .contact_main
     .contents
       .contact-section
         %h2
           Contact
+        - if flash[:notice]
+          .notice
+            = flash[:notice]
+
         = form_for @contact, url: confirm_contacts_path do |f|
 
           = render 'layouts/error_message', model: f.object

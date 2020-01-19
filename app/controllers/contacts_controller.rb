@@ -9,7 +9,8 @@ class ContactsController < ApplicationController
     if @contact.valid?
       render action: 'confirm'
     else
-      render action: 'new', notice: '書き間違いを訂正してください'
+      flash[:notice] = '※書き間違いを訂正してください'
+      render action: 'new'
     end
   end
 
@@ -18,9 +19,8 @@ class ContactsController < ApplicationController
     @contact = Contact.create(contact_params)
     MailSenderMailer.inquiry(@contact).deliver
     respond_to do |format|
-      binding.pry
       if @contact.save
-        format.html {render action: 'create', notice: 'お問い合わせメールが送信されました。'}
+        format.html {render action: 'create'}
       else
         format.html {render action: 'new'}
       end
