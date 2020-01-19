@@ -1,4 +1,4 @@
-.confirm_main {
+.contact_main {
   display: block;
   width: 980px;
   height: 100% ;
@@ -15,11 +15,20 @@
 .contact-section {
   padding: 20px;
 
+  .notice{
+    padding: 20px;
+    font-size: 20px;
+  }
 
   .new_contact {
     width: 70%;
-    padding-top:50px;
+    padding-top:20px;
     margin: 0 auto;
+
+    .alert-box {
+      padding-bottom: 30px;
+      margin-left: 200px;
+    }
 
     .contact-form {
       display: flex;
@@ -61,8 +70,13 @@
       &__text {
         width:450px;
       }
-
-
     }
+  }
+  .back_home {
+    width: 100%;
+    display: block;
+    text-align: center;
+    color: black;
+    margin: 20px auto;
   }
 }
