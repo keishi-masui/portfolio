@@ -1,0 +1,8 @@
+%h1
+  ログイン成功後に飛ぶユーザのshow画面
+
+  = @current_user.name
+  = @current_user.email
+
+  = link_to 'ログアウト', logout_path, method: :delete
+

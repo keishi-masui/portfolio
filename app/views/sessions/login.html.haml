@@ -1,0 +1,13 @@
+%h1
+  ここでログインする
+
+= form_with :session, url: log_in_path do |f|
+  = f.label :name, class: "log_in-session-label"
+  = f.text_field :name, class: "log_in-session-form_box"
+
+  = f.label :password, class: "log_in-session-label"
+  = f.text_field :password, class: "log_in-session-form_box"
+
+  = f.submit 'ログイン'
+
+
