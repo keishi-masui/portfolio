@@ -2,7 +2,7 @@
   ログイン成功後に飛ぶユーザのshow画面
 
   = @current_user.name
-  = @current_user.email
+  = @current_user.password
 
-  = link_to 'ログアウト', logout_path, method: :delete
+  = link_to 'ログアウト', sessions_logout_path, method: :delete
 
