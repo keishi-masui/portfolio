@@ -5,6 +5,8 @@
       .left__contents
         %h2.form-title
           New Post
+        = link_to 'ログアウト', sessions_logout_path, method: :delete
+
         = form_for @product, url: {action: "create"} do |f|
           .form
             .form__content

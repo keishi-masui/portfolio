@@ -1,6 +1,9 @@
 %h1
   ここでログインする
 
+= link_to 'ホームへ', root_path
+
+
 = form_for :session, url: sessions_login_path do |f|
   = f.label :name, class: "login-session-label"
   = f.text_field :name, class: "login-session-form_box"
