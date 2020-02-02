@@ -4,5 +4,8 @@
   = @current_user.name
   = @current_user.password
 
+  = link_to '管理者ページ', new_product_path
+
+
   = link_to 'ログアウト', sessions_logout_path, method: :delete
 
