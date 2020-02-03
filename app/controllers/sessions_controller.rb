@@ -17,6 +17,7 @@ class SessionsController < ApplicationController
         redirect_to controller: 'users', action: 'show', id: session[:user_id]
         # redirect_to user_path(session[:user_id])
       else
+        flash[:notice] = '※ name/password が違います'
         render("sessions/new")
       end
     end
