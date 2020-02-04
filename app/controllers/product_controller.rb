@@ -41,13 +41,5 @@ class ProductController < ApplicationController
     params.require(:product).permit(:name, :image, :language, :comment)
   end
 
-  def current_user
-    @current_user ||= User.find_by(id: session[:user_id])
-  end
-
-  def require_sign_in
-    redirect_to sessions_login_path unless current_user
-  end
-
 
 end
