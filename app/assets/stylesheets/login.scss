@@ -1,0 +1,29 @@
+
+.login-main {
+  width: 500px;
+  height: 70vh;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 80px;
+
+  .login_content {
+    margin-top: 30px;
+
+    span, a, input{
+      font-size: 24px;
+      color: black;
+    }
+    .login-session-label, .form_button {
+      font-size: 24px;
+    }
+  }
+    .logout {
+      border: solid 1px;
+      background-color: #f5f5f3;
+    }
+  }
+
+.notice {
+  font-size: 24px;
+  color: red;
+}

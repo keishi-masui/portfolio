@@ -1,11 +1,19 @@
-%h1
-  ログイン成功後に飛ぶユーザのshow画面
+.container
+  = render "share/header"
+  .login-main
+    %h2 ログイン成功!!
 
-  = @current_user.name
-  = @current_user.password
+    .login_content
+      %span
+        ユーザーネーム：
+      %span
+        = @current_user.name
 
-  = link_to '管理者ページ', new_product_path
+    .login_content
+      = link_to '作品投稿ページへ', new_product_path
+      %i.fas.fa-pen
 
 
-  = link_to 'ログアウト', sessions_logout_path, method: :delete
+    .login_content
+      = link_to 'ログアウト', sessions_logout_path, method: :delete, class: "logout"
 
