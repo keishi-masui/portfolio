@@ -1,6 +1,6 @@
 class ProductController < ApplicationController
 
-
+  before_action :set_product, only: [:show, :destroy, :edit]
   before_action :require_sign_in, only: [:new]
   before_action :current_user, only: [:new]
 
@@ -24,10 +24,12 @@ class ProductController < ApplicationController
   end
 
   def show
-    @product = Product.find(params[:id])
   end
 
-
+  def destroy
+    @product.delete
+    redirect_to product_index_path
+  end
 
 
 
