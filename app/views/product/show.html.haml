@@ -1,28 +1,38 @@
 .container
   = render "share/header"
-  .main
+  .portfolio-main
     .left
-      .left__contents
+      .left__contents.clearfix
         %h2.portfolio-title
           = @product.name
 
-        .image
-          .image-label
-            イメージ
-          .image-area
-            = image_tag @product.image, class: "product-image", style: "width:300px;"
+        - if already_login?
+          = link_to new_product_path, class: "product_edit_link" do
+            編集
+            %i.fas.fa-pencil-alt
+          = link_to new_product_path, class: "product_delete_link" do
+            削除
+            %i.fas.fa-trash-alt
 
-        .language
-          .language-label
-            使用言語
-          .language-area
-            = @product.language
 
-        .comment
-          .comment-label
-            説明
-          .comment-area
-            = @product.comment
+        .details
+          .detail.image
+            .image-label
+              イメージ
+            .image-area
+              = image_tag @product.image, class: "product-image", style: "width:300px;"
+
+          .detail.language
+            %span
+              使用言語:
+            %span{class:"language-area"}
+              = @product.language
+
+          .detail.comment
+            .comment-label
+              説明:
+            .comment-area
+              = @product.comment
 
 
 
