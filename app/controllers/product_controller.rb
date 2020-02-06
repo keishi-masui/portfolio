@@ -1,6 +1,6 @@
 class ProductController < ApplicationController
 
-  before_action :set_product, only: [:show, :destroy, :edit]
+  before_action :set_product, only: [:show, :destroy, :edit, :update]
   before_action :require_sign_in, only: [:new]
   before_action :current_user, only: [:new]
 
@@ -24,6 +24,15 @@ class ProductController < ApplicationController
   end
 
   def show
+  end
+
+  def edit
+  end
+
+  def update
+    @product.update(product_params)
+    redirect_to product_index_path
+
   end
 
   def destroy

@@ -7,7 +7,7 @@
           = @product.name
 
         - if already_login?
-          = link_to new_product_path, class: "product_edit_link" do
+          = link_to edit_product_path, class: "product_edit_link" do
             編集
             %i.fas.fa-pencil-alt
           = link_to product_path, method: :delete, class: "product_delete_link" do
