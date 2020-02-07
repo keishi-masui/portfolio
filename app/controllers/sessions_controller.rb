@@ -5,7 +5,9 @@ class SessionsController < ApplicationController
 
 
   def new
-
+    if already_login?
+        redirect_to controller: 'users', action: 'show', id: session[:user_id]
+    end
   end
 
 
