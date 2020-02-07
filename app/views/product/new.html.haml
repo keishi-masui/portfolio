@@ -5,7 +5,7 @@
       .left__contents
         %h2.form-title
           New Post
-        = link_to 'ログアウト', sessions_logout_path, method: :delete
+        = link_to 'ログアウト', sessions_logout_path, method: :delete, class: "logout-link clearfix"
 
         = form_for @product, url: {action: "create"} do |f|
           .form
