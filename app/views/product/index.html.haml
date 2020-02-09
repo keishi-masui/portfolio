@@ -5,7 +5,8 @@
       .left__contents
         %h2.portfolio-title
           Portfolio
-        .products
+
+        .products.clearfix
           - @products.each do |product|
             .product
               = link_to product_path(product.id) do
@@ -17,18 +18,21 @@
               %p.product-comment
                 = product.comment
 
+          = link_to sessions_login_path, class: "admin-link" do
+            %i.fas.fa-key
+            管理ページ
 
-    .right
-      .right__contents
-        .new_post
-          = link_to new_product_path do
-            new post
-        .others
-          if_user_signed_in(mypage)
-          %br
-          news
-          %br
-          genre
+    / .right
+    /   .right__contents
+    /     .new_post
+    /       = link_to new_product_path do
+    /         new post
+    /     .others
+    /       if_user_signed_in(mypage)
+    /       %br
+    /       news
+    /       %br
+    /       genre
 
 
     .clearfix

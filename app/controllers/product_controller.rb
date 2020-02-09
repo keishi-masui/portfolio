@@ -1,5 +1,10 @@
 class ProductController < ApplicationController
 
+  before_action :set_product, only: [:show, :destroy, :edit, :update]
+  before_action :require_sign_in, only: [:new]
+  before_action :current_user, only: [:new]
+
+
   def index
     @products = Product.order('id ASC')
   end
@@ -19,10 +24,21 @@ class ProductController < ApplicationController
   end
 
   def show
-    @product = Product.find(params[:id])
   end
 
+  def edit
+  end
 
+  def update
+    @product.update(product_params)
+    redirect_to product_index_path
+
+  end
+
+  def destroy
+    @product.delete
+    redirect_to product_index_path
+  end
 
 
 

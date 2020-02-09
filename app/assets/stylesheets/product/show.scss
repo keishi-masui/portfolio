@@ -1,13 +1,43 @@
-.portfolio-title {
-
+.product_edit_link {
+  padding-left: 50px;
+  font-size: 20px;
+}
+.product_delete_link {
+  padding-left: 20px;
+  font-size: 20px;
 }
 
-.image {
-  .image-label {
+
+.details {
+        width: 650px;
+        height: 100%;
+        float: left;
+        margin: 20px 50px 20px;
+  .detail {
+    margin-bottom: 20px;
   }
-  .image-area {
-    text-align: center;
-  margin:  auto;
+
+  .image {
+    .image-label {
+    }
+    .image-area {
+      text-align: center;
+      margin:  auto;
+    }
+  }
+
+  .language {
+    .language-area {
+      margin-left: 15px;
+      font-size: 24px;
+    }
+  }
+
+  .comment {
+    .comment-area {
+      box-sizing: border-box;
+      padding: 10px;
+    }
   }
 }
 

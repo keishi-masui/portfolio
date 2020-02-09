@@ -1,0 +1,19 @@
+.container
+  = render "share/header"
+  .login-main
+    %h2 ログイン成功!!
+
+    .login_content
+      %span
+        ユーザーネーム：
+      %span
+        = @current_user.name
+
+    .login_content
+      = link_to '作品投稿ページへ', new_product_path
+      %i.fas.fa-pen
+
+
+    .login_content
+      = link_to 'ログアウト', sessions_logout_path, method: :delete, class: "logout"
+

@@ -4,10 +4,10 @@
     .left
       .left__contents
         %h2.form-title
-          New Post
-        = link_to 'ログアウト', sessions_logout_path, method: :delete, class: "logout-link clearfix"
+          Edit Post
+        = link_to 'ログアウト', sessions_logout_path, method: :delete
 
-        = form_for @product, url: {action: "create"} do |f|
+        = form_for @product, url: {action: "update"} do |f|
           .form
             .form__content
               = f.label :画像, class: "form__label"
